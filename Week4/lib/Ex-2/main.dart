@@ -64,6 +64,32 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Widget child;
+
+    if (position == IconPosition.left) {
+      child = Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Padding(
+            padding: EdgeInsets.only(left: 10, right: 10),
+            child: Icon(icon, color: Colors.grey[300]),
+          ),
+          Text(label, style: TextStyle(color: Colors.grey[300])),
+        ],
+      );
+    } else {
+      child = Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(label, style: TextStyle(color: Colors.grey[300])),
+          Padding(
+            padding: EdgeInsets.only(left: 10, right: 10),
+            child: Icon(icon, color: Colors.grey[300]),
+          ),
+        ],
+      );
+    }
+
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
@@ -71,25 +97,7 @@ class CustomButton extends StatelessWidget {
       ),
       margin: EdgeInsets.only(bottom: 20),
       height: 40,
-
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          if (position == IconPosition.left) ...[
-            Padding(
-              padding: EdgeInsets.only(left: 10, right: 10),
-              child: Icon(icon, color: Colors.grey[300]),
-            ),
-            Text(label, style: TextStyle(color: Colors.grey[300])),
-          ] else ...[
-            Text(label, style: TextStyle(color: Colors.grey[300])),
-            Padding(
-              padding: EdgeInsets.only(left: 10, right: 10),
-              child: Icon(icon, color: Colors.grey[300]),
-            ),
-          ],
-        ],
-      ),
+      child: child,
     );
   }
 }

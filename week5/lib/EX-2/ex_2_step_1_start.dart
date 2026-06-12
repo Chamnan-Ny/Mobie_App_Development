@@ -35,10 +35,14 @@ class _FavoriteState extends State<Favorite> {
           ),
           SizedBox(height: 70),
           IconButton(
-            onPressed: () => {isFavorite = !isFavorite},
+            onPressed: () => {
+              setState(() {
+                isFavorite = !isFavorite;
+              })
+              },
             icon: Icon(
-              Icons.favorite,
-              color: isFavorite ? Colors.red : Colors.white,
+              isFavorite ? Icons.favorite : Icons.favorite_border,
+              color: Colors.red,
             ),
           ),
         ],
