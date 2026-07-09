@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:week9/EX-1/ui/screens/button_screen.dart';
+
+import 'ui/screens/button_screen.dart';
 
 void main() {
   runApp(const MyApp());

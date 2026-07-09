@@ -2,7 +2,8 @@ import 'dart:convert' as convert;
 import 'dart:convert';
 import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
-import 'package:week9/EX-1/models/button_status.dart';
+
+import '../models/button_status.dart';
 
 class ButtonRepository {
   static ButtonRepository instance = ButtonRepository();

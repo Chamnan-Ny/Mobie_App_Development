@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:week9/EX-1/models/button_status.dart';
-import 'package:week9/EX-1/repository/button_repository.dart';
+
+import '../../models/button_status.dart';
+import '../../repository/button_repository.dart';
 
 class ButtonScreen extends StatefulWidget {
   @override
