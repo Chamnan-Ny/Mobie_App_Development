@@ -9,7 +9,6 @@ class ButtonScreen extends StatefulWidget {
 }
 
 class ButtonScreenState extends State<ButtonScreen> {
-  // Simple variables to hold state
   final repo = ButtonRepository();
   bool isLoading = true;
   ButtonStatus? buttonData;
@@ -18,7 +17,7 @@ class ButtonScreenState extends State<ButtonScreen> {
   @override
   void initState() {
     super.initState();
-    fetchButtonData(); // Start fetching on load [cite: 25, 30]
+    fetchButtonData(); 
   }
 
   void fetchButtonData() async {
